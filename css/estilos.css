@@ -1,0 +1,524 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+Display:ital,wght@0,300;0,400;0,800;1,300&family=Raleway:wght@100;200;600;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@200;300;400;700;800&family=Noto+Serif+Display:ital,wght@0,300;0,400;0,800;1,300&family=Raleway:wght@100;200;600;900&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box; }
+
+/*KEYFRAME*/
+@keyframes slide1 {
+  from {
+    margin-top: 50%;
+    opacity: 0%; }
+  to {
+    margin-top: 0%;
+    opacity: 100%; } }
+
+/*---HEADER---*/
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.393);
+  position: sticky;
+  top: 0px;
+  z-index: 2; }
+  header img {
+    margin-top: 10px;
+    height: 85px;
+    margin-left: 30px;
+    margin-bottom: 10px; }
+  header nav ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0px; }
+    header nav ul li {
+      margin: 0px 20px 0px 20px;
+      font-size: 14px; }
+      header nav ul li a {
+        font-family: "Karla", sans-serif;
+        font-weight: 300;
+        text-decoration: none;
+        color: #414141; }
+        header nav ul li a:hover {
+          text-decoration: underline;
+          color: black; }
+
+/*---SLIDER HOME---*/
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  width: 100%;
+  font-family: "Noto Serif Display", serif;
+  animation-name: slide1;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-direction: initial;
+  animation-delay: 1s; }
+  .hero .slider .carousel-caption {
+    text-align: left;
+    left: 5%; }
+    .hero .slider .carousel-caption h1 {
+      font-size: 7rem;
+      line-height: 3rem;
+      color: white;
+      font-family: "Noto Serif Display", serif;
+      font-style: italic;
+      font-weight: 300; }
+      .hero .slider .carousel-caption h1 .ph {
+        font-size: 30px; }
+    .hero .slider .carousel-caption p {
+      width: 300px;
+      color: white;
+      font-family: "Noto Serif Display", serif;
+      font-style: italic;
+      font-weight: 300;
+      padding-top: 10px; }
+  .hero .slider .carousel-control-prev {
+    width: 5%; }
+  .hero .slider .carousel-control-next {
+    width: 5%; }
+
+/*---CATEGORIAS---*/
+.categorias {
+  width: 70%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto auto auto;
+  column-gap: 0px;
+  row-gap: 50px;
+  margin: 0px auto;
+  margin-top: 100px;
+  grid-template-areas: "img1 vacio1 txt1" "txt2 img2 vacio2" "img3 vacio3 txt3"; }
+  .categorias div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    padding: 20px;
+    font-family: "Noto Serif Display", serif; }
+    .categorias div img {
+      width: 100%;
+      transition: 1s; }
+      .categorias div img:hover {
+        transform: scale(1.03); }
+    .categorias div h3 {
+      font-family: "Noto Serif Display", serif;
+      line-height: 90px;
+      justify-content: center;
+      font-style: italic;
+      font-size: 6em;
+      font-weight: 300; }
+    .categorias div a {
+      font-family: "Karla", sans-serif;
+      text-decoration: underline;
+      padding: 5px;
+      margin-top: 20px;
+      margin-left: 70px;
+      color: #696868;
+      font-size: 12px;
+      transition: 1s ease-out; }
+      .categorias div a:hover {
+        transform: translateX(20px);
+        color: black;
+        font-weight: 700; }
+  .categorias .img-enescena {
+    grid-area: img1;
+    grid-column: 1 / span 2; }
+  .categorias .vacio1 {
+    grid-area: vacio1; }
+  .categorias .txt-enescena {
+    grid-area: txt1; }
+  .categorias .img-viajes {
+    grid-area: img2;
+    grid-column: 2 / span 3; }
+  .categorias .vacio2 {
+    grid-area: vacio2; }
+  .categorias .txt-viajes {
+    grid-area: txt2; }
+  .categorias .img-print {
+    grid-area: img3;
+    grid-column: 1 / span 2; }
+  .categorias .vacio3 {
+    grid-area: vacio3; }
+  .categorias .txt-print {
+    grid-area: txt3; }
+
+/*---SUBCATEGORIAS---*/
+.titulo-categoria h1 {
+  font-family: "Noto Serif Display", serif;
+  font-style: italic;
+  text-align: center;
+  font-weight: 300;
+  font-size: 3em;
+  margin-bottom: 20px; }
+
+.swiper-slide img {
+  width: 100%;
+  object-fit: cover; }
+
+.swiper-slide .descripcion-foto {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px; }
+  .swiper-slide .descripcion-foto .titulo-fotos {
+    font-family: "Noto Serif Display", serif;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 15px;
+    margin-top: 5px; }
+  .swiper-slide .descripcion-foto .subtitulo-fotos {
+    font-family: "Noto Serif Display", serif;
+    font-weight: 300;
+    font-size: 11px; }
+
+.swiper-button-next, .swiper-button-prev {
+  color: rgba(193, 192, 192, 0.74); }
+
+:root {
+  --swiper-navigation-size: 22px; }
+
+/*---PRINT---*/
+.imprimibles {
+  width: 70%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto auto auto;
+  column-gap: 20px;
+  row-gap: 50px;
+  margin: 0px auto;
+  margin-top: 50px;
+  grid-template-areas: "foto1 hueco1 info1" "info2 foto2 hueco2" "foto3 hueco3 info3"; }
+  .imprimibles .foto1 {
+    grid-area: foto1;
+    grid-column: 1 / span 2; }
+    .imprimibles .foto1 img {
+      width: 100%; }
+  .imprimibles .hueco1 {
+    grid-area: hueco1; }
+  .imprimibles .info-foto1 {
+    grid-area: info1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; }
+  .imprimibles .foto2 {
+    grid-area: foto2;
+    grid-column: 2 / span 3; }
+    .imprimibles .foto2 img {
+      width: 100%; }
+  .imprimibles .hueco2 {
+    grid-area: hueco2; }
+  .imprimibles .info-foto2 {
+    grid-area: info2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; }
+  .imprimibles .foto3 {
+    grid-area: foto3;
+    grid-column: 1 / span 2; }
+    .imprimibles .foto3 img {
+      width: 100%; }
+  .imprimibles .hueco3 {
+    grid-area: hueco3; }
+  .imprimibles .info-foto3 {
+    grid-area: info3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; }
+  .imprimibles h1 {
+    font-family: "Noto Serif Display", serif;
+    font-size: 1.5em;
+    font-weight: 300;
+    font-style: italic; }
+  .imprimibles h2 {
+    font-family: "Karla", sans-serif;
+    font-size: 12px;
+    font-weight: 300; }
+  .imprimibles .info-encargar .dropdown {
+    font-family: "Karla", sans-serif; }
+    .imprimibles .info-encargar .dropdown .btn {
+      padding: 6px 15px 6px 15px;
+      margin-top: 10px;
+      font-size: 12px;
+      border-radius: 0px; }
+    .imprimibles .info-encargar .dropdown .btn-secondary {
+      background-color: black;
+      border-radius: 0px;
+      border: 0px; }
+      .imprimibles .info-encargar .dropdown .btn-secondary:focus {
+        color: black;
+        background-color: white;
+        border: 0px;
+        box-shadow: none; }
+    .imprimibles .info-encargar .dropdown .dropdown-item {
+      font-size: 14px; }
+    .imprimibles .info-encargar .dropdown .btn-outline-dark {
+      font-family: "Karla", sans-serif; }
+
+/*---CONTACTO---*/
+.form {
+  background-image: url(../img/fondo-contacto.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 75vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  font-family: "Karla", sans-serif; }
+  .form .titulo-form h1 {
+    font-size: 40px;
+    text-align: center;
+    font-family: "Noto Serif Display", serif;
+    font-style: italic;
+    font-weight: 200;
+    padding-top: 50px;
+    padding-bottom: 30px; }
+  .form .formulario {
+    width: 30%; }
+    .form .formulario .campos {
+      display: flex;
+      flex-direction: column;
+      font-size: 14px;
+      margin: 10px; }
+      .form .formulario .campos textarea {
+        border: 0px;
+        border-bottom: 1px solid grey;
+        background: none; }
+    .form .formulario input {
+      width: 100%;
+      height: 35px;
+      border-color: #d1d1d1;
+      border: none;
+      border-bottom: 1px solid grey;
+      background: none; }
+    .form .formulario .boton {
+      display: flex;
+      justify-content: right;
+      width: 100%; }
+      .form .formulario .boton input[type="submit" i] {
+        padding: 0px 20px 0px 20px;
+        color: black;
+        border: 1px solid gray;
+        font-family: "Karla", sans-serif;
+        font-size: 14px;
+        margin-top: 30px;
+        transition: 1s; }
+        .form .formulario .boton input[type="submit" i]:hover {
+          color: white;
+          background-color: black;
+          border: none; }
+
+/*---FOOTER---*/
+footer {
+  position: relative;
+  bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: 80px; }
+  footer div a img {
+    height: 30px; }
+
+/**----------MEDIA QUERY--------**/
+@media screen and (max-width: 1400px) {
+  .categorias {
+    width: 80%; }
+  .categorias div h3 {
+    line-height: 70px;
+    font-size: 5em; }
+  .form .formulario {
+    width: 50%; }
+  .formulario .campos {
+    font-size: 12px;
+    margin: 6px; } }
+
+@media screen and (max-width: 1000px) {
+  header {
+    background-color: rgba(255, 255, 255, 0.935);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+  header nav ul li {
+    margin: 20px;
+    font-size: 16px; }
+  header img {
+    margin-top: 20px;
+    margin-left: 0px;
+    margin-bottom: 10px; }
+  .hero .slider .carousel-caption {
+    padding-bottom: 0.25rem; }
+  .hero .slider .carousel-caption h1 {
+    font-size: 5rem;
+    line-height: 3rem; }
+  .hero .slider .carousel-caption p {
+    padding-top: 0px; }
+  .categorias {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto auto auto auto auto auto;
+    row-gap: 10px;
+    grid-template-areas: "img1 vacio1" "txt1 txt1" "img2 vacio2" "txt2 txt2" "img3 vacio3" "txt3 txt3"; }
+  .categorias div {
+    padding-top: 0px;
+    padding-bottom: 10px; }
+  .categorias div h3 {
+    text-align: center;
+    font-size: 70px;
+    font-weight: 300; }
+  .categorias div a {
+    text-align: center;
+    margin-top: 10px;
+    margin-left: 0px; }
+  .categorias .img-viajes {
+    grid-area: img2;
+    grid-column: 1 / span 2; }
+  .txt-enescena {
+    margin-bottom: 40px; }
+  .txt-viajes {
+    margin-bottom: 40px; }
+  .txt-print {
+    margin-bottom: 40px; }
+  .imprimibles {
+    width: 80%; }
+  .imprimibles h2 {
+    font-size: 12px; } }
+
+@media screen and (max-width: 800px) {
+  .hero .slider .carousel-caption {
+    font-size: 14px; }
+  .hero .slider .carousel-caption h1 {
+    font-size: 4rem;
+    line-height: 2rem; }
+  .hero .slider .carousel-caption h1 .ph {
+    font-size: 22px; }
+  .form {
+    height: 65vh; }
+  .form .campos {
+    margin: 0px; }
+  .form .titulo-form h1 {
+    font-size: 35px; } }
+
+@media screen and (max-width: 750px) {
+  .categorias {
+    margin-top: 50px; }
+  .form .formulario {
+    width: 70%; }
+  .imprimibles {
+    display: block; }
+  .imprimibles .info-foto1, .imprimibles .info-foto2, .imprimibles .info-foto3 {
+    height: 130px;
+    margin-top: 10px;
+    justify-content: start; }
+  .titulo-fotos {
+    padding: 10px; }
+  .subtitulo-fotos {
+    padding: 10px; }
+  .descripcion-print {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center; }
+  .dropdown {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center; }
+  .dropdown .btn {
+    margin: 10px 10px 0px 0px; } }
+
+@media screen and (max-width: 575px) {
+  header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center; }
+  header img {
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-bottom: 20px; }
+  header nav ul {
+    margin-top: 10px;
+    margin-right: 20px;
+    display: flex;
+    flex-direction: column;
+    list-style-type: none; }
+  header nav ul li {
+    margin: 0px 0px 5px 0px;
+    font-size: 12px; }
+  .hero .slider .carousel-caption {
+    text-align: center;
+    bottom: 0.25rem;
+    left: 10%;
+    right: 10%; }
+  .hero .slider .carousel-caption h1 {
+    font-size: 3em;
+    text-align: center; }
+  .hero .slider .carousel-caption p {
+    width: 100%;
+    font-size: 12px;
+    text-align: center; }
+  .categorias {
+    width: 100%; }
+  .categorias div {
+    padding: 0px; }
+  .categorias div h3 {
+    font-size: 3em; }
+  .titulo-form h1 {
+    font-size: 30px; }
+  .descripcion-foto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+  .subtitulo-fotos {
+    padding: 0px; } }
+
+@media screen and (max-width: 475px) {
+  .hero .slider .carousel-caption {
+    left: 5%; }
+  .hero .slider .carousel-caption h1 {
+    font-size: 2rem;
+    text-align: left;
+    line-height: 1rem; }
+  .hero .slider .carousel-caption p {
+    display: none; }
+  .hero .slider .carousel-caption h1 .ph {
+    font-size: 14px; }
+  .imprimibles {
+    width: 100%; }
+  .descripcion-print {
+    flex-direction: column;
+    align-items: start; }
+  .info-foto1, .info-foto2, .info-foto3 {
+    margin-top: 10px;
+    margin-left: 20px; } }
+
+@media screen and (max-width: 350px) {
+  header nav ul li {
+    margin: 0px;
+    font-size: 11px; }
+  .categorias {
+    margin-top: 40px;
+    row-gap: 10px; }
+  .categorias div h3 {
+    font-size: 2em; }
+  .categorias div a {
+    margin-top: 0px;
+    margin-left: 0px;
+    padding: 0px; }
+  .titulo-form h1 {
+    padding-top: 20px; }
+  .info-foto1, .info-foto2, .info-foto3 {
+    margin-left: 0px; }
+  .descripcion-print {
+    align-items: center; }
+  .dropdown {
+    justify-content: center; }
+  .btn {
+    margin: 10px 5px; } }

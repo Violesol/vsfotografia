@@ -1,0 +1,322 @@
+/**----------MEDIA QUERY--------**/ 
+
+
+@media screen and (max-width: 1400px) { 
+
+    .categorias {
+            width: 80%;
+     }
+        
+    .categorias div h3{
+            line-height: 70px;
+            font-size: 5em;   
+    }
+    
+    .form .formulario{
+        width: 50%;
+    }   
+    .formulario .campos{
+        font-size: 12px;
+        margin: 6px;
+    }
+    
+    }
+    
+    @media screen and (max-width: 1000px) { 
+    
+    
+        header{
+            background-color: rgba(255, 255, 255, 0.935);
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        header nav ul li{ 
+            margin: 20px;
+            font-size: 16px;         
+        }
+    
+        header img{
+            margin-top: 20px;
+            margin-left: 0px;
+            margin-bottom: 10px;
+        }
+    
+        .hero .slider .carousel-caption{
+            padding-bottom: 0.25rem;
+        }
+    
+        .hero .slider .carousel-caption h1{
+            font-size: 5rem; 
+            line-height: 3rem; 
+        }
+        .hero .slider .carousel-caption p{
+            padding-top: 0px;  
+        }
+    
+    
+        .categorias{
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: auto auto auto auto auto auto;
+            row-gap: 10px;
+            grid-template-areas: 
+            "img1 vacio1"
+            "txt1 txt1"
+            "img2 vacio2"
+            "txt2 txt2"
+            "img3 vacio3"
+            "txt3 txt3"
+        }
+        .categorias div{
+           padding-top: 0px;
+           padding-bottom: 10px;
+        }
+    
+        .categorias div h3{
+            text-align: center;
+            font-size: 70px;
+            font-weight: 300;
+        }
+    
+        .categorias div a{
+            text-align: center;
+            margin-top: 10px;
+            margin-left: 0px;
+        }
+    
+    
+    .categorias .img-viajes{
+        grid-area: img2;
+        grid-column: 1 / span 2; 
+    }
+    
+    .txt-enescena{
+        margin-bottom: 40px;
+    }
+    
+    .txt-viajes{
+        margin-bottom: 40px;
+    }
+    
+    .txt-print{
+        margin-bottom: 40px;
+    }
+    
+    .imprimibles {
+        width: 80%;
+    }
+   
+    .imprimibles h2 {
+        font-size: 12px;
+    }
+    
+    }
+    
+    @media screen and (max-width: 800px) {
+    
+    .hero .slider .carousel-caption{
+        font-size: 14px;
+    }
+    
+    .hero .slider .carousel-caption h1{
+        font-size: 4rem; 
+        line-height: 2rem;   
+    }
+    
+    .hero .slider .carousel-caption h1 .ph{
+        font-size: 22px;
+    }
+    .form{
+        height: 65vh;
+    }
+    .form .campos{
+        margin: 0px;
+    }
+    .form .titulo-form h1{
+        font-size: 35px;
+    }
+    
+    }
+    
+    @media screen and (max-width: 750px) { 
+     
+    .categorias {
+        margin-top: 50px;
+    }
+    .form .formulario{
+        width: 70%;
+    }
+    .imprimibles{
+        display:block;
+    }
+    .imprimibles .info-foto1,.imprimibles .info-foto2,.imprimibles .info-foto3 {
+        height: 130px;
+        margin-top: 10px;
+        justify-content: start;
+    }
+    
+    .titulo-fotos{
+        padding: 10px;
+    }  
+    .subtitulo-fotos{
+        padding: 10px;
+    }  
+    
+    .descripcion-print{
+        display: flex;
+        flex-direction: row;
+        justify-content:space-between;
+        align-items: center;
+    }
+    .dropdown{
+        display: flex;
+        flex-direction: row;
+        justify-content: start;
+        align-items: center;
+    }
+    
+    .dropdown .btn{
+        margin: 10px 10px 0px 0px;
+    }
+    }
+    
+    @media screen and (max-width: 575px) { 
+    
+        header{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;    
+        }
+    
+        header img{
+            margin-top: 20px;
+            margin-left: 20px;
+            margin-bottom: 20px;
+        }
+    
+        header nav ul{ 
+            margin-top: 10px;
+            margin-right: 20px;
+            display: flex;
+            flex-direction: column;
+            list-style-type: none;
+        }
+        
+        header nav ul li{ 
+            margin: 0px 0px 5px 0px;
+            font-size: 12px;
+        }
+        .hero .slider .carousel-caption{ 
+            text-align: center;
+            bottom: 0.25rem;
+            left: 10%;
+            right: 10%;
+        }
+        
+        .hero .slider .carousel-caption h1{
+            font-size: 3em; 
+            text-align: center;   
+        }
+    
+        .hero .slider .carousel-caption p{
+            width: 100%;
+            font-size: 12px;
+            text-align: center;
+        }
+    
+        .categorias {
+            width: 100%;
+     }
+    
+        .categorias div {
+            padding: 0px; 
+    }
+        .categorias div h3{
+            font-size: 3em;   
+    }
+    
+        .titulo-form h1{
+        font-size: 30px;
+    }
+       .descripcion-foto{
+        @include descripcion-foto (flex, column, center, center);
+    }
+    .subtitulo-fotos{
+        padding: 0px;
+    }  
+    }
+    
+    @media screen and (max-width: 475px) {
+    
+   .hero .slider .carousel-caption{
+            left: 5%;
+    }
+    .hero .slider .carousel-caption h1{
+            font-size: 2rem;  
+            text-align: left;
+            line-height: 1rem;
+    }
+    
+    .hero .slider .carousel-caption p{
+        display: none;
+    }
+    
+    .hero .slider .carousel-caption h1 .ph{
+        font-size: 14px;
+    }
+    
+    .imprimibles{
+            width: 100%;
+    }
+    
+    .descripcion-print{ 
+        flex-direction: column;
+        align-items: start;
+    }   
+    .info-foto1,.info-foto2,.info-foto3 {
+         margin-top: 10px;
+         margin-left: 20px;
+    }
+    
+    }
+    @media screen and (max-width: 350px) { 
+        
+        header nav ul li{
+            margin: 0px;
+            font-size: 11px;
+        }
+    
+        .categorias{
+            margin-top: 40px;
+            row-gap: 10px;
+        }
+    
+        .categorias div h3{
+            font-size: 2em; 
+        }
+        .categorias div a {
+            margin-top: 0px;
+            margin-left: 0px;
+            padding: 0px;
+        }
+    
+        .titulo-form h1 {
+            padding-top: 20px;
+        }
+        .info-foto1,.info-foto2,.info-foto3 {
+             margin-left: 0px;
+        }
+    
+        .descripcion-print{
+            align-items:center;
+        }
+    
+        .dropdown{
+            justify-content: center;
+        }
+        .btn{
+            margin: 10px 5px;
+        } 
+    }

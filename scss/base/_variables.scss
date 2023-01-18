@@ -1,0 +1,24 @@
+//!VARIABLES
+
+$font-principal: 'Noto Serif Display', serif;
+$font-secundaria: 'Karla', sans-serif;
+$font-color-nav: rgb(65, 65, 65);
+$font-color-nav-2: white;
+
+//!LISTAS
+
+$fondo-header:
+rgba(255, 255, 255, 0.393),
+rgba(0, 0, 0, 0.773),
+rgba(33, 33, 33, 0.693);
+
+
+//!MIXIN
+
+@mixin descripcion-foto ($flex, $direction, $justify, $align){
+
+    display: $flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}

@@ -1,0 +1,47 @@
+/*---SLIDER HOME---*/
+.hero{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    width: 100%;
+    font-family: $font-principal;
+    animation-name: slide1;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-direction: initial;
+    animation-delay: 1s;
+    .slider{
+                .carousel-caption{
+                     text-align: left;
+                     left: 5%;
+                    h1{
+                        font-size: 7rem;
+                        line-height: 3rem;
+                        color: rgb(255, 255, 255);
+                        font-family: $font-principal;
+                        font-style: italic;
+                        font-weight: 300; 
+                        .ph{
+                            font-size: 30px;
+                        }
+                    }
+                    p {
+                        width: 300px;
+                        color: rgb(255, 255, 255);
+                        font-family: $font-principal;
+                        font-style: italic;
+                        font-weight: 300;
+                        padding-top: 10px;             
+            }
+        }     
+    
+    .carousel-control-prev{
+        width: 5%;
+
+    }
+    .carousel-control-next{
+        width: 5%;
+
+    }
+    }
+}
