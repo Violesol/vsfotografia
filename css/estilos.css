@@ -471,7 +471,7 @@ footer {
     font-size: 3em; }
   .titulo-form h1 {
     font-size: 30px; }
-  .descripcion-foto {
+  .swiper-slide .descripcion-foto {
     display: flex;
     flex-direction: column;
     justify-content: center;

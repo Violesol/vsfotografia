@@ -240,7 +240,7 @@
         .titulo-form h1{
         font-size: 30px;
     }
-       .descripcion-foto{
+    .swiper-slide .descripcion-foto{
         @include descripcion-foto (flex, column, center, center);
     }
     .subtitulo-fotos{
