@@ -14,36 +14,61 @@
     margin-top: 0%;
     opacity: 100%; } }
 
+@keyframes imgdamero {
+  from {
+    opacity: 0%; }
+  to {
+    opacity: 100%; } }
+
+.animate__animated {
+  animation-delay: 0.06s;
+  transition: ease-in; }
+
 /*---HEADER---*/
 header {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
   background-color: rgba(255, 255, 255, 0.393);
   position: sticky;
   top: 0px;
   z-index: 2; }
   header img {
     margin-top: 10px;
-    height: 85px;
-    margin-left: 30px;
+    height: 80px;
+    margin-left: 10px;
     margin-bottom: 10px; }
-  header nav ul {
-    display: flex;
-    list-style-type: none;
-    margin: 0px; }
-    header nav ul li {
-      margin: 0px 20px 0px 20px;
-      font-size: 14px; }
-      header nav ul li a {
-        font-family: "Karla", sans-serif;
-        font-weight: 300;
-        text-decoration: none;
-        color: #414141; }
-        header nav ul li a:hover {
-          text-decoration: underline;
-          color: black; }
+  header .navbar {
+    padding: 0px; }
+    header .navbar .navbar-toggler {
+      border: 0px; }
+    header .navbar .navbar-collapse {
+      flex-grow: initial; }
+      header .navbar .navbar-collapse ul {
+        display: flex;
+        list-style-type: none;
+        margin: 0px; }
+        header .navbar .navbar-collapse ul li {
+          margin: 0px 20px 0px 20px;
+          font-size: 14px; }
+          header .navbar .navbar-collapse ul li a {
+            font-family: "Karla", sans-serif;
+            font-weight: 300;
+            text-decoration: none;
+            color: #414141;
+            display: inline-block;
+            position: relative; }
+            header .navbar .navbar-collapse ul li a::after {
+              content: "";
+              position: absolute;
+              width: 100%;
+              height: 1px;
+              bottom: 0;
+              left: 0;
+              background-color: #414141;
+              transform: scaleX(0);
+              transform-origin: bottom right;
+              transition: transform 0.5s ease-in-out; }
+            header .navbar .navbar-collapse ul li a:hover::after {
+              transform: scaleX(1);
+              transform-origin: bottom left; }
 
 /*---SLIDER HOME---*/
 .hero {
@@ -57,6 +82,8 @@ header {
   animation-timing-function: ease-in-out;
   animation-direction: initial;
   animation-delay: 1s; }
+  .hero .slider img {
+    width: 100%; }
   .hero .slider .carousel-caption {
     text-align: left;
     left: 5%; }
@@ -73,7 +100,6 @@ header {
       width: 300px;
       color: white;
       font-family: "Noto Serif Display", serif;
-      font-style: italic;
       font-weight: 300;
       padding-top: 10px; }
   .hero .slider .carousel-control-prev {
@@ -164,23 +190,39 @@ header {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  margin-top: 5px;
   margin-bottom: 40px; }
   .swiper-slide .descripcion-foto .titulo-fotos {
     font-family: "Noto Serif Display", serif;
     font-style: italic;
     font-weight: 300;
-    font-size: 15px;
-    margin-top: 5px; }
+    font-size: 15px; }
   .swiper-slide .descripcion-foto .subtitulo-fotos {
     font-family: "Noto Serif Display", serif;
     font-weight: 300;
-    font-size: 11px; }
+    font-size: 11px;
+    margin-bottom: 0px; }
 
 .swiper-button-next, .swiper-button-prev {
+  top: 42%;
   color: rgba(193, 192, 192, 0.74); }
 
 :root {
   --swiper-navigation-size: 22px; }
+
+/*---DAMERO LETREROS---*/
+.damero-letreros {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); }
+  .damero-letreros .img1 {
+    width: 100%;
+    animation-name: imgdamero;
+    animation-duration: 2s; }
+  .damero-letreros .img2 {
+    width: 100%;
+    animation-name: imgdamero;
+    animation-duration: 4s; }
 
 /*---PRINT---*/
 .imprimibles {
@@ -290,6 +332,8 @@ header {
         border: 0px;
         border-bottom: 1px solid grey;
         background: none; }
+        .form .formulario .campos textarea:focus {
+          outline: none; }
     .form .formulario input {
       width: 100%;
       height: 35px;
@@ -297,6 +341,8 @@ header {
       border: none;
       border-bottom: 1px solid grey;
       background: none; }
+      .form .formulario input:focus {
+        outline: none; }
     .form .formulario .boton {
       display: flex;
       justify-content: right;
@@ -324,7 +370,11 @@ footer {
   text-align: center;
   margin-top: 80px; }
   footer div a img {
-    height: 30px; }
+    transition: 1s ease-in-out;
+    height: 30px;
+    opacity: 80%; }
+    footer div a img:hover {
+      opacity: 100%; }
 
 /**----------MEDIA QUERY--------**/
 @media screen and (max-width: 1400px) {
@@ -332,26 +382,20 @@ footer {
     width: 80%; }
   .categorias div h3 {
     line-height: 70px;
-    font-size: 5em; }
+    font-size: 4em; }
   .form .formulario {
     width: 50%; }
   .formulario .campos {
     font-size: 12px;
-    margin: 6px; } }
+    margin: 6px; }
+  .damero-letreros {
+    grid-template-columns: repeat(3, 1fr); } }
 
 @media screen and (max-width: 1000px) {
-  header {
-    background-color: rgba(255, 255, 255, 0.935);
-    flex-direction: column;
-    justify-content: center;
-    align-items: center; }
-  header nav ul li {
-    margin: 20px;
-    font-size: 16px; }
+  header .navbar .navbar-collapse ul li {
+    margin: 0px 0px 0px 10px; }
   header img {
-    margin-top: 20px;
-    margin-left: 0px;
-    margin-bottom: 10px; }
+    height: 75px; }
   .hero .slider .carousel-caption {
     padding-bottom: 0.25rem; }
   .hero .slider .carousel-caption h1 {
@@ -368,9 +412,7 @@ footer {
     padding-top: 0px;
     padding-bottom: 10px; }
   .categorias div h3 {
-    text-align: center;
-    font-size: 70px;
-    font-weight: 300; }
+    text-align: center; }
   .categorias div a {
     text-align: center;
     margin-top: 10px;
@@ -387,7 +429,14 @@ footer {
   .imprimibles {
     width: 80%; }
   .imprimibles h2 {
-    font-size: 12px; } }
+    font-size: 12px; }
+  .damero-letreros {
+    grid-template-columns: repeat(2, 1fr); } }
+
+@media (min-width: 992px) {
+  .navbar-expand-lg .navbar-nav .nav-link {
+    padding-right: 0px;
+    padding-left: 0px; } }
 
 @media screen and (max-width: 800px) {
   .hero .slider .carousel-caption {
@@ -402,14 +451,29 @@ footer {
   .form .campos {
     margin: 0px; }
   .form .titulo-form h1 {
-    font-size: 35px; } }
+    font-size: 35px; }
+  .damero-letreros .fila-letreros {
+    flex-wrap: wrap; }
+  .damero-letreros .fila-letreros .img1 {
+    padding: 70px; } }
 
 @media screen and (max-width: 750px) {
+  .hero .slider img {
+    width: 120%; }
+  .hero .slider .carousel-caption h1 {
+    display: none; }
+  .hero .slider .carousel-caption p {
+    display: none; }
   .categorias {
     margin-top: 50px; }
+  .categorias div a {
+    margin-top: 0px; }
+  .categorias div h3 {
+    font-size: 3em; }
   .form .formulario {
     width: 70%; }
   .imprimibles {
+    margin-top: 20px;
     display: block; }
   .imprimibles .info-foto1, .imprimibles .info-foto2, .imprimibles .info-foto3 {
     height: 130px;
@@ -433,15 +497,6 @@ footer {
     margin: 10px 10px 0px 0px; } }
 
 @media screen and (max-width: 575px) {
-  header {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center; }
-  header img {
-    margin-top: 20px;
-    margin-left: 20px;
-    margin-bottom: 20px; }
   header nav ul {
     margin-top: 10px;
     margin-right: 20px;
@@ -451,24 +506,8 @@ footer {
   header nav ul li {
     margin: 0px 0px 5px 0px;
     font-size: 12px; }
-  .hero .slider .carousel-caption {
-    text-align: center;
-    bottom: 0.25rem;
-    left: 10%;
-    right: 10%; }
-  .hero .slider .carousel-caption h1 {
-    font-size: 3em;
-    text-align: center; }
-  .hero .slider .carousel-caption p {
-    width: 100%;
-    font-size: 12px;
-    text-align: center; }
-  .categorias {
-    width: 100%; }
   .categorias div {
     padding: 0px; }
-  .categorias div h3 {
-    font-size: 3em; }
   .titulo-form h1 {
     font-size: 30px; }
   .swiper-slide .descripcion-foto {
@@ -477,20 +516,17 @@ footer {
     justify-content: center;
     align-items: center; }
   .subtitulo-fotos {
-    padding: 0px; } }
+    padding: 0px; }
+  .damero-letreros {
+    grid-template-columns: 1fr; }
+  .damero-letreros .img1 {
+    padding: 40px; } }
 
 @media screen and (max-width: 475px) {
   .hero .slider .carousel-caption {
     left: 5%; }
-  .hero .slider .carousel-caption h1 {
-    font-size: 2rem;
-    text-align: left;
-    line-height: 1rem; }
-  .hero .slider .carousel-caption p {
-    display: none; }
-  .hero .slider .carousel-caption h1 .ph {
-    font-size: 14px; }
   .imprimibles {
+    margin-top: 0px;
     width: 100%; }
   .descripcion-print {
     flex-direction: column;
@@ -507,7 +543,8 @@ footer {
     margin-top: 40px;
     row-gap: 10px; }
   .categorias div h3 {
-    font-size: 2em; }
+    font-size: 2em;
+    margin-bottom: 0px; }
   .categorias div a {
     margin-top: 0px;
     margin-left: 0px;

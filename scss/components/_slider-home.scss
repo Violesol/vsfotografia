@@ -11,6 +11,9 @@
     animation-direction: initial;
     animation-delay: 1s;
     .slider{
+        img{
+            width: 100%;
+        }
                 .carousel-caption{
                      text-align: left;
                      left: 5%;
@@ -29,7 +32,6 @@
                         width: 300px;
                         color: rgb(255, 255, 255);
                         font-family: $font-principal;
-                        font-style: italic;
                         font-weight: 300;
                         padding-top: 10px;             
             }

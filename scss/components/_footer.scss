@@ -11,7 +11,12 @@ footer{
     div{
         a{
             img{
+                transition: 1s ease-in-out;
                 height: 30px;
+                opacity: 80%;
+                &:hover{
+                    opacity: 100%;
+                }
             }
 
         }

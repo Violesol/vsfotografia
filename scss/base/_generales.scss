@@ -21,3 +21,18 @@
         opacity: 100%;
 }
 }
+
+@keyframes imgdamero{
+    from{
+        opacity: 0%;
+    }
+    to{
+        opacity: 100%;
+    }
+}
+
+.animate__animated{
+    animation-delay: 0.06s;
+    transition: ease-in;
+}
+

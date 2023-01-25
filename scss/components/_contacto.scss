@@ -34,6 +34,9 @@
                 border: 0px;
                 border-bottom: 1px solid grey;
                 background: none;
+                &:focus{
+                    outline: none;
+                }
             }
         }
         input{
@@ -43,6 +46,9 @@
             border: none;
             border-bottom: 1px solid grey;
             background: none;
+            &:focus{
+                outline: none;
+            }
         }
             
         .boton {
