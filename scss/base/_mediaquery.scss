@@ -144,7 +144,8 @@
         font-size: 22px;
     }
     .form{
-        height: 65vh;
+        height: 70vh;
+        background-position-x: -630px;
     }
     .form .campos{
         margin: 0px;
@@ -272,7 +273,8 @@
     }
 
     .swiper-button-next, .swiper-button-prev {
-        top:83%;     
+        top:85%;
+        color: rgba(93, 92, 92, 0.74);     
     }
     
     :root {
@@ -285,7 +287,26 @@
    .hero .slider .carousel-caption{
         left: 5%;
     }
-   
+
+    header .navbar .navbar-collapse{
+        height: 100vh;
+    }
+
+    header .navbar .navbar-collapse ul{
+        align-items: center;
+        margin: 75px 0px 0px 0px;
+    }
+
+    .navbar-light .navbar-nav .nav-link {
+        color: black;
+    }
+
+    header .navbar .navbar-collapse ul li a {
+        font-family:'Noto Serif Display', serif;
+        font-weight: 300;
+        font-size: 24px;
+    }
+
     .imprimibles{
         margin-top: 0px;
         width: 100%;

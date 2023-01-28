@@ -128,24 +128,23 @@ header {
     text-align: left;
     padding: 20px;
     font-family: "Noto Serif Display", serif; }
-    .categorias div img {
+    .categorias div .img {
       width: 100%;
-      transition: 1s; }
-      .categorias div img:hover {
+      transition: 1s ease; }
+      .categorias div .img:hover {
         transform: scale(1.03); }
     .categorias div h3 {
       font-family: "Noto Serif Display", serif;
       line-height: 90px;
       justify-content: center;
-      font-style: italic;
       font-size: 6em;
       font-weight: 300; }
     .categorias div a {
       font-family: "Karla", sans-serif;
       text-decoration: underline;
       padding: 5px;
-      margin-top: 20px;
-      margin-left: 70px;
+      margin-top: 10px;
+      margin-left: 60px;
       color: #696868;
       font-size: 12px;
       transition: 1s ease-out; }
@@ -322,7 +321,7 @@ header {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  height: 75vh;
+  height: 90vh;
   display: flex;
   flex-direction: column;
   justify-content: start;
@@ -473,7 +472,8 @@ footer {
   .hero .slider .carousel-caption h1 .ph {
     font-size: 22px; }
   .form {
-    height: 65vh; }
+    height: 70vh;
+    background-position-x: -630px; }
   .form .campos {
     margin: 0px; }
   .form .titulo-form h1 {
@@ -555,13 +555,25 @@ footer {
   .damero-letreros .img1 {
     padding: 40px; }
   .swiper-button-next, .swiper-button-prev {
-    top: 83%; }
+    top: 85%;
+    color: rgba(93, 92, 92, 0.74); }
   :root {
     --swiper-navigation-size: 16px; } }
 
 @media screen and (max-width: 475px) {
   .hero .slider .carousel-caption {
     left: 5%; }
+  header .navbar .navbar-collapse {
+    height: 100vh; }
+  header .navbar .navbar-collapse ul {
+    align-items: center;
+    margin: 75px 0px 0px 0px; }
+  .navbar-light .navbar-nav .nav-link {
+    color: black; }
+  header .navbar .navbar-collapse ul li a {
+    font-family: 'Noto Serif Display', serif;
+    font-weight: 300;
+    font-size: 24px; }
   .imprimibles {
     margin-top: 0px;
     width: 100%; }
