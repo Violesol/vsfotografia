@@ -24,6 +24,9 @@
   animation-delay: 0.06s;
   transition: ease-in; }
 
+.navbar-light .navbar-toggler {
+  color: rgba(255, 255, 255, 0); }
+
 /*---HEADER---*/
 header {
   background-color: rgba(255, 255, 255, 0.393);
@@ -78,10 +81,10 @@ header {
   width: 100%;
   font-family: "Noto Serif Display", serif;
   animation-name: slide1;
-  animation-duration: 2s;
+  animation-duration: 1.5s;
   animation-timing-function: ease-in-out;
   animation-direction: initial;
-  animation-delay: 1s; }
+  animation-delay: 0; }
   .hero .slider img {
     width: 100%; }
   .hero .slider .carousel-caption {
@@ -178,7 +181,7 @@ header {
   font-style: italic;
   text-align: center;
   font-weight: 300;
-  font-size: 3em;
+  font-size: 45px;
   margin-bottom: 20px; }
 
 .swiper-slide img {
@@ -223,6 +226,18 @@ header {
     width: 100%;
     animation-name: imgdamero;
     animation-duration: 4s; }
+
+.btn-up {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px; }
+  .btn-up a {
+    color: rgba(0, 0, 0, 0.812);
+    transition: 1s; }
+    .btn-up a:hover {
+      transform: translateY(-5px); }
+    .btn-up a i {
+      font-size: 1.5rem; }
 
 /*---PRINT---*/
 .imprimibles {
@@ -431,7 +446,18 @@ footer {
   .imprimibles h2 {
     font-size: 12px; }
   .damero-letreros {
-    grid-template-columns: repeat(2, 1fr); } }
+    grid-template-columns: repeat(2, 1fr); }
+  footer {
+    margin-top: 45px; }
+  @keyframes slide1 {
+    from {
+      margin-top: 0%;
+      margin-left: 100%;
+      opacity: 0%; }
+    to {
+      margin-top: 0%;
+      margin-left: 0%;
+      opacity: 100%; } } }
 
 @media (min-width: 992px) {
   .navbar-expand-lg .navbar-nav .nav-link {
@@ -465,7 +491,7 @@ footer {
   .hero .slider .carousel-caption p {
     display: none; }
   .categorias {
-    margin-top: 50px; }
+    margin-top: 45px; }
   .categorias div a {
     margin-top: 0px; }
   .categorias div h3 {
@@ -480,7 +506,7 @@ footer {
     margin-top: 10px;
     justify-content: start; }
   .titulo-fotos {
-    padding: 10px; }
+    padding: 5px; }
   .subtitulo-fotos {
     padding: 10px; }
   .descripcion-print {
@@ -508,6 +534,13 @@ footer {
     font-size: 12px; }
   .categorias div {
     padding: 0px; }
+  .categorias div h3 {
+    font-size: 2em;
+    line-height: normal;
+    margin-top: 0px;
+    margin-bottom: 0px; }
+  .categorias .txt-enescena, .txt-viajes, .txt-print {
+    margin-bottom: 12px; }
   .titulo-form h1 {
     font-size: 30px; }
   .swiper-slide .descripcion-foto {
@@ -520,7 +553,11 @@ footer {
   .damero-letreros {
     grid-template-columns: 1fr; }
   .damero-letreros .img1 {
-    padding: 40px; } }
+    padding: 40px; }
+  .swiper-button-next, .swiper-button-prev {
+    top: 83%; }
+  :root {
+    --swiper-navigation-size: 16px; } }
 
 @media screen and (max-width: 475px) {
   .hero .slider .carousel-caption {
@@ -528,6 +565,10 @@ footer {
   .imprimibles {
     margin-top: 0px;
     width: 100%; }
+  .categorias {
+    width: 75%; }
+  .titulo-categoria h1 {
+    font-size: 30px; }
   .descripcion-print {
     flex-direction: column;
     align-items: start; }
@@ -558,4 +599,6 @@ footer {
   .dropdown {
     justify-content: center; }
   .btn {
-    margin: 10px 5px; } }
+    margin: 10px 5px; }
+  .swiper-button-next, .swiper-button-prev {
+    top: 80%; } }

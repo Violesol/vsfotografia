@@ -67,8 +67,7 @@
         }
     
         .categorias div h3{
-            text-align: center;
-            
+            text-align: center;    
         }
     
         .categorias div a{
@@ -82,7 +81,7 @@
         grid-area: img2;
         grid-column: 1 / span 2; 
     }
-    
+   
     .txt-enescena{
         margin-bottom: 40px;
     }
@@ -105,6 +104,22 @@
     .damero-letreros{
         grid-template-columns: repeat(2,1fr);
     }
+    footer{
+        margin-top: 45px;
+    }
+
+@keyframes slide1 {
+    from {
+        margin-top: 0%;
+        margin-left: 100%;
+        opacity: 0%;
+}
+    to {
+        margin-top: 0%;
+        margin-left: 0%;
+        opacity: 100%;
+}
+}
     }
     
     @media (min-width: 992px){ 
@@ -160,7 +175,7 @@
    }
 
     .categorias {
-        margin-top: 50px;
+        margin-top: 45px;
     }
     .categorias div a{
         margin-top: 0px;
@@ -183,7 +198,7 @@
     }
     
     .titulo-fotos{
-        padding: 10px;
+        padding: 5px;
     }  
     .subtitulo-fotos{
         padding: 10px;
@@ -205,6 +220,8 @@
     .dropdown .btn{
         margin: 10px 10px 0px 0px;
     }
+   
+
     }
     
     @media screen and (max-width: 575px) { 
@@ -226,7 +243,18 @@
         .categorias div {
             padding: 0px; 
     }
-    
+
+    .categorias div h3{
+        font-size: 2em;
+        line-height: normal;
+        margin-top: 0px;   
+        margin-bottom: 0px;
+    }
+
+    .categorias .txt-enescena, .txt-viajes, .txt-print{
+        margin-bottom: 12px;
+    }
+
     .titulo-form h1{
     font-size: 30px;
     }
@@ -242,6 +270,14 @@
     .damero-letreros .img1{
         padding: 40px;
     }
+
+    .swiper-button-next, .swiper-button-prev {
+        top:83%;     
+    }
+    
+    :root {
+        --swiper-navigation-size: 16px;
+    }
     }
     
     @media screen and (max-width: 475px) {
@@ -254,7 +290,13 @@
         margin-top: 0px;
         width: 100%;
     }
-    
+    .categorias{
+        width: 75%;
+    }
+    .titulo-categoria h1 {
+        font-size: 30px;
+    }
+
     .descripcion-print{ 
         flex-direction: column;
         align-items: start;
@@ -263,6 +305,7 @@
          margin-top: 10px;
          margin-left: 20px;
     }
+
   
     }
     @media screen and (max-width: 350px) { 
@@ -304,4 +347,7 @@
         .btn{
             margin: 10px 5px;
         } 
+        .swiper-button-next, .swiper-button-prev {
+            top:80%;    
+        }
     }

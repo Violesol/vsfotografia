@@ -35,7 +35,6 @@
                 font-style: italic;
                 font-size: 6em;
                 font-weight:300;
-    
             }
             a{
                 font-family: $font-secundaria;
@@ -97,7 +96,7 @@
         font-style: italic;
         text-align: center;
         font-weight: 300;
-        font-size: 3em;
+        font-size: 45px;
         margin-bottom: 20px;
         
     }
@@ -157,6 +156,24 @@
             animation-duration: 4s;     
         }
     
+}
+
+.btn-up{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    a{
+        color: rgba(0, 0, 0, 0.812);
+        transition: 1s;
+        &:hover{
+            transform: translateY(-5px);
+        }
+        i{
+           font-size: 1.5rem;
+        }
+    }
+    
+
 }
 
 /*---PRINT---*/
