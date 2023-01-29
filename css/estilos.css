@@ -572,15 +572,13 @@ footer {
     color: black; }
   header .navbar .navbar-collapse ul li a {
     font-family: 'Noto Serif Display', serif;
-    font-weight: 400;
+    font-weight: 300;
     font-size: 24px; }
   .imprimibles {
     margin-top: 0px;
     width: 100%; }
   .categorias {
     width: 75%; }
-  .categorias div h3 {
-    font-weight: 400; }
   .titulo-categoria h1 {
     font-size: 30px; }
   .descripcion-print {
