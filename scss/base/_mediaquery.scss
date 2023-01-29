@@ -294,7 +294,7 @@
 
     header .navbar .navbar-collapse ul{
         align-items: center;
-        margin: 75px 0px 0px 0px;
+        margin: 60px 0px 0px 0px;
     }
 
     .navbar-light .navbar-nav .nav-link {
@@ -303,7 +303,7 @@
 
     header .navbar .navbar-collapse ul li a {
         font-family:'Noto Serif Display', serif;
-        font-weight: 300;
+        font-weight: 400;
         font-size: 24px;
     }
 
@@ -314,6 +314,11 @@
     .categorias{
         width: 75%;
     }
+
+    .categorias div h3{
+        font-weight: 400;
+    }
+    
     .titulo-categoria h1 {
         font-size: 30px;
     }
