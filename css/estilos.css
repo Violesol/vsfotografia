@@ -523,6 +523,8 @@ footer {
     margin: 10px 10px 0px 0px; } }
 
 @media screen and (max-width: 575px) {
+  header {
+    background-color: white; }
   header nav ul {
     margin-top: 10px;
     margin-right: 20px;

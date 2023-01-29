@@ -26,8 +26,8 @@
     }
     
     @media screen and (max-width: 1000px) { 
-    
-    
+
+
         header .navbar .navbar-collapse ul li{ 
             margin: 0px 0px 0px 10px;           
         }
@@ -226,7 +226,10 @@
     }
     
     @media screen and (max-width: 575px) { 
-    
+
+        header {
+            background-color: nth($fondo-header , 4);
+        }
      
         header nav ul{ 
             margin-top: 10px;
