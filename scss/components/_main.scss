@@ -1,5 +1,21 @@
 /*---CATEGORIAS---*/
 
+.flecha-abajo {
+    width: 100%;
+    text-align: center;
+    line-height: 20px;
+    margin-top: 30px;
+    a{
+        svg{
+            &:hover{
+                stroke: black;
+            }
+        }
+        
+    }
+    
+}
+
 .categorias{
     width: 70%;
     display: grid;
@@ -8,7 +24,7 @@
     column-gap: 0px;
     row-gap: 50px;
     margin: 0px auto;
-    margin-top: 100px;
+    margin-top: 50px;
     grid-template-areas: 
     "img1 vacio1 txt1"
     "txt2 img2 vacio2"
